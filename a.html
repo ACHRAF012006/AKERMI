@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .body {
+        width: 100px;
+        height: 100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-name: achref;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        position: relative;
+        animation-timing-function: linear;
+      }
+      @keyframes achref {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .center {
+        background-color: red;
+        height: 50%;
+        z-index: 100;
+        width: 50%;
+        border-radius: 180px;
+      }
+      .x {
+        border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+        background-color: green;
+        width: 50%;
+        height: 50%;
+      }
+      .g {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        transform: rotate(90deg);
+      }
+      .t {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .y {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        transform: rotate(90deg);
+      }
+      .b {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+      }
+      .a {
+        position: absolute;
+
+        left: 49.25%;
+
+        background-color: rgb(189, 150, 25);
+        top: 50%;
+        bottom: 0;
+        width: 1.5%;
+        z-index: 0;
+      }
+      i {
+        position: absolute;
+
+        z-index: 999;
+        left: -5px;
+        animation-name: wind;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+      }
+
+      #q i:nth-child(n) {
+        top: 20%;
+        animation-delay: 0.4s;
+      }
+      #q i:nth-child(2n) {
+        top: 30%;
+        animation-delay: 0.5s;
+      }
+      #q i:nth-child(3n) {
+        top: 45%;
+        animation-delay: 0.75s;
+      }
+      #q i:nth-child(4n) {
+        top: 40%;
+        animation-delay: 0.1s;
+      }
+
+      @keyframes wind {
+        0% {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+        100% {
+          transform: translate3d(1000px, 200px, 0);
+          opacity: 0;
+        }
+      }
+      i img {
+        width: 50px;
+      }
+      img {
+        position: absolute;
+        width: 10%;
+        z-index: 0;
+        top: 20%;
+        left: -5px;
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <div><img src="ak.png" /></div>
+    <div id="q">
+      <i><img src="Wind-PNG-Free-Image-removebg-preview.png" /></i>
+      <i><img src="Wind-PNG-Free-Image-removebg-preview.png" /></i>
+      <i><img src="Wind-PNG-Free-Image-removebg-preview.png" /></i>
+      <i><img src="Wind-PNG-Free-Image-removebg-preview.png" /></i>
+    </div>
+    <div class="a"></div>
+    <div class="body">
+      <div class="g , x"></div>
+      <div class="center"></div>
+      <div class="t , x"></div>
+      <div class="y , x"></div>
+      <div class="b , x"></div>
+    </div>
+  </body>
+</html>
